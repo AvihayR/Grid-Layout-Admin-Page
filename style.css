@@ -1,12 +1,13 @@
-*{
-  /*  border: 1px solid rgb(216, 216, 216);*/
-}
-
 /*--------------------
 Grid Template Layout
 --------------------*/
+:root{
+    height: 100vh;
+    max-width: 100vw;
+}
+
 body{
-    height: 99vh;
+    height: 100vh;
     max-width: 100vw;
 }
 .grid-container.fullpage{
@@ -34,7 +35,8 @@ header{
 }
 
 .search-area{
-    grid-template-columns: 25px 1fr;
+    grid-template-columns: 15px 1fr;
+    grid-gap: 15px;
 }
 
 .profile-area{
@@ -49,6 +51,7 @@ section.lower-header{
     grid-column: 1/-1;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
+    grid-gap: 0.5vw;
 }
 
 .lower-header img{
@@ -65,14 +68,53 @@ section.lower-header{
     grid-area: 2/3/3/4;
 }
 
+.lower-header>p{
+    align-self: end;
+}
+
 nav>ul{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     justify-items: center;
 }
 
-/*-----------------
------------------*/
+ul.aside-links{
+    justify-self: center;
+    display: grid;
+    grid-auto-rows: 38px;
+}
 
-aside ul{
+/*-----------------
+Main grid layout
+-----------------*/
+main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 3.5fr 3.5fr;
+}
+
+section.cards{
+    grid-row: 2/4;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+}
+
+.card{
+    border: 1px solid silver;
+}
+section.side-cards{
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-rows: 1fr 7fr 1fr 7fr;
+}
+
+/*-------------------
+Styling of components
+-------------------*/
+
+#search-bar{
+    max-width: 85%;
+    height: 60%;
+    border-radius: 25px;
+    
 }
