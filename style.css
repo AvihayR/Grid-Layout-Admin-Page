@@ -97,11 +97,20 @@ section.cards{
     grid-row: 2/4;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    grid-gap: 25px;
 }
 
 .card{
+    display: grid;
     border: 1px solid silver;
+    border-radius: 15px;
+    padding: 10px;
 }
+
+.card>h4{
+    justify-self: center;
+}
+
 section.side-cards{
     grid-row: 1/-1;
     display: grid;
@@ -114,7 +123,7 @@ Styling of components
 
 #search-bar{
     max-width: 85%;
-    height: 60%;
+    height: 27px;
     border-radius: 25px;
     
 }
