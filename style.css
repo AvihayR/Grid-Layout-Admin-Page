@@ -47,6 +47,7 @@ header{
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 55px 55px;
+    margin-bottom: 2vh;
 }
 
 .search-area,.profile-area{
@@ -61,21 +62,26 @@ header{
 }
 
 .profile-area{
-    grid-template-columns: 2fr 1fr 2fr;
-    margin-right: 5vw;
-    gap: 2px;
+    grid-template-columns: 3fr 1fr 1fr;
+    gap: 6px;
 }
 
 section{
     display: grid;
 }
 
+section.profile-area>a:nth-child(1),section.profile-area>a:nth-child(2){
+    justify-self: end;
+}
+
 section.lower-header{
+    margin-top: 2vh;
     grid-column: 1/-1;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 5.5rem 1fr 3fr;
     grid-template-rows: repeat(2,1fr);
     grid-gap: 0.5vw;
 }
+
 
 .lower-header img{
     grid-row: 1/3;
@@ -96,10 +102,17 @@ section.lower-header{
     grid-row: 1/-1;
 }
 
+
 nav>ul{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,6.5rem);
     align-items: center;
+    gap: 1.5rem;
+}
+
+nav>ul>li{
+    height: 100%;
+    width: 100%;
 }
 
 ul.aside-links{
@@ -155,7 +168,7 @@ Styling of components
 }
 
 /*-------------------
-Styling of aside related elements
+Styling of aside 
 -------------------*/
 
 li>img , aside>label>img{
@@ -204,21 +217,19 @@ Header styling
 }
 
 .profile-pic{
-    height: 2.5rem;
-    width: 2.4rem;
-    border-radius: 17px;
+    height: 2.7rem;
+    width: 2.7rem;
+    border-radius: 2rem;
     justify-self: end;
 }
 
 .profile-name{
     justify-self: start;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--black-bg)
 }
 
-.big-profile-pic{
-    height: 4.5rem;
-    width: 4.4rem;
-    border-radius: 3.5rem;
-}
 
 input#search-bar{
     background-color: var(--stone);
@@ -227,11 +238,40 @@ input#search-bar{
     font-size: 20px;
 }
 
-.nav-btn{
-    height: 40px;
-    width: 90px;    
+.big-profile-pic{
+    grid-column: 1/2;
+    justify-self: start;
+    height: 4.5rem;
+    width: 4.4rem;
+    border-radius: 3.5rem;
 }
 
-.header-nav{
-    display: grid;
+.nav-btn{
+    justify-self: end;
+    height: 6.3vh;
+    width: 100%;
+    border-radius: 30px;
+    background-color: var(--grape);    
+    color: var(--white-bg);
+    border: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 5px;
+    cursor: pointer;
 }
+
+nav.header-nav{
+    display: grid;
+    justify-items: start;
+}
+
+.lower-header>p{
+    font-weight: bolder;
+    font-size: min(1.5rem,3.5vw);
+}
+
+.lower-header>h2{
+    font-size: min(1rem,2.5vw);
+}
+
