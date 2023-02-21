@@ -40,6 +40,7 @@ aside{
     display: grid;
     grid-template-rows: 70px 7fr;
     grid-gap: 5px;
+    position: relative;
 }
 
 header{
@@ -120,7 +121,9 @@ ul.aside-links{
     justify-self: start;
     display: grid;
     grid-auto-rows: 38px;
-    gap: 15px;
+    gap: 3.5vh;
+    position: fixed;
+    top: 10vh;
 }
 
 /*-----------------
