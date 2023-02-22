@@ -61,6 +61,11 @@ header{
     margin-left: 1rem;
 }
 
+.search-area>label{
+    justify-self: center;
+    margin-top: 3px;
+}
+
 .profile-area{
     grid-template-columns: 2rem 4rem 4rem;
     gap: 6px;
@@ -243,7 +248,7 @@ Header styling
 
 input#search-bar{
     background-color: var(--stone);
-    padding: 1vh 1.2vw;
+    padding: 2vh 1.3vw;
     border: none;
     font-size: 20px;
 }
@@ -254,6 +259,7 @@ input#search-bar{
     height: 4.2rem;
     width: 4rem;
     border-radius: 5.5rem;
+    object-fit: cover;
 }
 
 .nav-btn{
@@ -312,8 +318,8 @@ div.card,div.big-card{
 div.big-card{
     border: 1px solid var(--stone);
     border-radius: 15px;
-    width: max(23vw,19rem);
-    height: 90%;
+    width: max(19vw,15rem);
+    height: 75vh;
     align-self: center;
     margin: 0 0.5rem;
     margin-bottom: 2rem;
@@ -341,7 +347,7 @@ h2.star-movies , h2.trend{
 
 
 .card>h4{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     letter-spacing: 0.6vh;
     font-weight: bold;
     align-self: center;
@@ -349,6 +355,7 @@ h2.star-movies , h2.trend{
 }
 
 .card>p{
+    font-size: 1.2rem;
     padding: 1.5rem;
 }
 
@@ -356,5 +363,89 @@ h2.star-movies , h2.trend{
 main section styling
 -------------------*/
 main{
+    background-color: var(--stone);
+}
+
+/*-------------------
+Side / big cards grid layouts
+-------------------*/
+div.big-card.announ{
+    display: grid;
+    align-content: space-around;
+    padding: 1.5rem; 
+}
+
+
+div.big-card.trend-card{
+    display: grid;
+    align-content: space-evenly;  
+    padding: 1.5vw;
+}
+div.trend-card>article{
+    display: grid;
+    grid-template-columns: 4.8rem 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+article>img.big-profile-pic{
+    grid-row: 1/-1;
+    align-self: center;
+    border: 3px solid orange;
+}
+
+article>h6{
+    align-self: end;
+}
+
+
+/*-------------------
+Side / big cards grid additional styles
+-------------------*/
+
+div.big-card.announ>article>h4{
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: 900;
+    margin-bottom: 2.2vh;
+}
+
+div.big-card.announ>article>p{
+    font-size: 1.2rem;
+    margin-bottom: 2.2vh;
+}
+
+div.big-card.announ>div.line-break{
+    border-top: 4px dashed var(--stone);
+    margin: 2px 0;
+}
+
+
+
+div.trend-card>article>h6{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+}
+
+div.trend-card>article>p{
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color:var(--black-bg);
+    margin-top: 2px;
+}
+
+div.trend-card>article>img{
+    height: 3.8rem;
+    width: 3.5rem;
+    border-radius: 60%;
+    justify-self: center;
+}
+
+div.card > * , div.big-card > *, .aside-links > *{
+    cursor: pointer;
+}
+
+
+footer{
     background-color: var(--stone);
 }
