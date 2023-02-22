@@ -226,8 +226,9 @@ Header styling
 
 .profile-pic{
     height: 2.7rem;
-    width: 2.7rem;
-    border-radius: 2rem;
+    width: 2.8rem;
+    border-radius: 50px;
+    
     justify-self: end;
     border: 2px solid var(--fanta);
 }
@@ -250,9 +251,9 @@ input#search-bar{
 .big-profile-pic{
     grid-column: 1/2;
     justify-self: start;
-    height: 4.5rem;
-    width: 4.4rem;
-    border-radius: 3.5rem;
+    height: 4.2rem;
+    width: 4rem;
+    border-radius: 5.5rem;
 }
 
 .nav-btn{
@@ -311,11 +312,12 @@ div.card,div.big-card{
 div.big-card{
     border: 1px solid var(--stone);
     border-radius: 15px;
-    width: max(25vw,19rem);
-    height: 85%;
+    width: max(23vw,19rem);
+    height: 90%;
     align-self: center;
-    margin-left: 1rem;
-    margin-bottom: 5rem
+    margin: 0 0.5rem;
+    margin-bottom: 2rem;
+    align-self:start;
 
 }
 
